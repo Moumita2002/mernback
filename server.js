@@ -1,8 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const dotenv = require('dotenv');
 
-const MONGODB_URL = "mongodb://127.0.0.1:27017/yoga";
+dotenv.config();
+
+const MONGODB_URL = process.env.MONGO_URL;
 const app = express();
 
 // MiddleWares
